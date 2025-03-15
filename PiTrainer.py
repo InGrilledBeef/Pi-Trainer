@@ -13,22 +13,43 @@
 
 import msvcrt
 import requests
+import os
 from collections import deque
 
-pi_digits_json = requests.get('https://api.pi.delivery/v1/pi?start=0&numberOfDigits=100&radix=10').json()
-pi_digits = pi_digits_json['content']
+def get_pi_digits(start, numberOfDigits, radix):
+    pi_digits_json = requests.get('https://api.pi.delivery/v1/pi?start=0&numberOfDigits=100&radix=10').json()
+    pi_digits = pi_digits_json['content']
 
-digit_input = deque()   # Stores user input to print
+def main():
+    digit_input = deque()   # Stores user input to print
 
-while True:
-    print("Input Digit: ", end="", flush=True)
-    key = msvcrt.getch()  # Captures a single key press
-    if key.decode() == 'e': 
-        break
-    
-    # User Input is stored to first 30 digits 
-    digit_input.append(key.decode())    
-    if len(digit_input) > 30:
-        digit_input.popleft()
-    print("".join(digit_input))
-    # print("\nYou pressed:", key.decode())  # Decode to convert bytes to string
+    print("How many digits would you like to recite (type infinite for neverending): ")
+    digit_limit = input()
+    digit_count = 0
+
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+    while True if digit_limit == "infinite" else digit_count < int(digit_limit):
+        print("Input Digit: ", flush=True)
+        key = msvcrt.getch()  # Captures a single key press
+        if key.decode() == 'e': 
+            break
+        
+        # Invalid Input check
+        if not key.decode().isnumeric():
+            print("Invalid Input. Please input a digit (0-9)")
+            continue
+        
+        # User Input is stored to first 30 digits 
+        digit_input.append(key.decode())    
+        if len(digit_input) > 30:
+            digit_input.popleft()
+
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("".join(digit_input))
+        
+        digit_count += 1    # update digit count
+
+
+if __name__ == "__main__":
+    main()

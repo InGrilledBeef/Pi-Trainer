@@ -13,3 +13,7 @@ Just something to practice reciting PI Digits
 
 # API Used
 - I used this cool API: https://pi.delivery/#apipi_get
+
+# Sources
+- ChatGPT (ty :prayge:)
+- Input Clear: https://stackoverflow.com/questions/73099914/after-i-enter-an-input-in-python-how-do-i-clear-it-from-my-cli
