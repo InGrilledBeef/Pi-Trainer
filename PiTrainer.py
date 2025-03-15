@@ -1,16 +1,3 @@
-# Features
-"""
-- Mistakes are fine lol, it just won't let you move on for a bit (if wrong digit, print "wrong")
-- Type "e" to end, or ends when reached # digits to recite
-- Set how many digits you want to recite
-- Infinite mode tbd
-- If you want to start from the middle, we preview previous 10 digits
-- Check if it is a digit, only submit if it is a digit or EOF
-- TKinter UI with cute girls TBD as well
-- NOTE: No need for user to add . but they do need to start with 3
-- Print the digits on the bottom as user progresses? (scroll with 30 digits?)
-"""
-
 import msvcrt
 import requests
 import os
