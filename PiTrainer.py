@@ -11,8 +11,14 @@ def get_pi_digits(start):
 
 def main():
     digit_input = deque()   # Stores user input to print
+    digit_input.appendleft('3.')
 
-    start = 0 # Digit number that pi recitation starts at
+    start = 1 # Digit number that pi recitation starts at
+
+    print("Would you like to start reciting from the beginning of PI? [yes/no]:", end=" ")
+    if input() == 'no':
+        print("Where would you like to start? (typing 9 means the 9th digit starting from after the decimal point):", end=" ")
+        start = int(input())
 
     print("How many digits would you like to recite (type infinite for neverending): ")
     digit_limit = input()
@@ -24,6 +30,8 @@ def main():
     next_digit = pi_digits.popleft()
 
     while True if digit_limit == "infinite" else digit_count < int(digit_limit):
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("".join(digit_input))
         print("Input Digit: ", flush=True)
         key = msvcrt.getch()  # Captures a single key press
         if key.decode() == 'e': 
@@ -46,11 +54,8 @@ def main():
 
         # User Input is stored to first 30 digits 
         digit_input.append(key.decode())    
-        if len(digit_input) > 30:
+        if len(digit_input) > 50:
             digit_input.popleft()
-
-        os.system('cls' if os.name == 'nt' else 'clear')
-        print("".join(digit_input))
 
         if len(pi_digits) == 0:
             start += 100

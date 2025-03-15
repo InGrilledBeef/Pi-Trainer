@@ -2,7 +2,7 @@
 Just something to practice reciting PI Digits :3
 
 # Notes
-- PI recitation starts BEFORE the decimal point (with a 3)
+- PI recitation starts AFTER the decimal point
 
 # Working Features
 
@@ -13,6 +13,7 @@ Just something to practice reciting PI Digits :3
 
 # TODO
 - Add the ability to start from the middle (say from the 100th digit) instead of the first digit. We preview the first ~10 digits to help the user figure out the location.
+- At the end, print out how many digits were recited
 - At the end, add option to reveal the next [user inputted] number of digits
 - Create a TKinter UI option for PI Recitation (and add cute features or maybe gacha options TBD)
 
