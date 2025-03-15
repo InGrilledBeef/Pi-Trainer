@@ -11,13 +11,12 @@ def get_pi_digits(start):
 
 def main():
     digit_input = deque()   # Stores user input to print
-    digit_input.appendleft('3.')
 
     start = 1 # Digit number that pi recitation starts at
 
     print("Would you like to start reciting from the beginning of PI? [yes/no]:", end=" ")
     if input() == 'no':
-        print("Where would you like to start? (typing 9 means the 9th digit starting from after the decimal point):", end=" ")
+        print("Where would you like to start? (typing 9 means you want to start at the 9th digit starting from after the decimal point):", end=" ")
         start = int(input())
 
     print("How many digits would you like to recite (type infinite for neverending): ")
@@ -25,7 +24,16 @@ def main():
     digit_count = 0
 
     os.system('cls' if os.name == 'nt' else 'clear')
-    pi_digits = get_pi_digits(start)
+
+    preview = start - 15 if start > 15 else 1   # preview 15 digits before start
+
+    if preview == 1:
+        digit_input.appendleft('3.')
+
+    pi_digits = get_pi_digits(preview)
+
+    for i in range(preview, start):
+        digit_input.append(pi_digits.popleft())
 
     next_digit = pi_digits.popleft()
 
