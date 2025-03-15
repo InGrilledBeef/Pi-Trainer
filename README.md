@@ -9,7 +9,7 @@ Just something to practice reciting PI Digits :3
 - Mistakes are fine, it just lets you know by telling you that you're wrong 
 - Type "e" to end
 - Only digits are valid input. It will let you know if input is invalid
-- In the beginning, you can set how many digits you want to recite. Type infinite for infinte recitation!
+- In the beginning, you can set how many digits you want to recite. Type "infinite" for infinite recitation!
 
 # TODO
 - Add the ability to start from the middle (say from the 100th digit) instead of the first digit. We preview the first ~10 digits to help the user figure out the location.
