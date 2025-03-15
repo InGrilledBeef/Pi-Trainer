@@ -1,18 +1,15 @@
 # Pi-Trainer
-Just something to practice reciting PI Digits
+Just something to practice reciting PI Digits :3
 
-# How To Use and Features
+# Working Features
 
-- Mistakes are fine lol, it just won't let you move on for a bit 
+- Mistakes are fine, it just lets you know by telling you that you're wrong 
 - Type "e" to end
-- Set how many digits you want to recite
-- Infinite mode tbd
-- If you want to start from the middle, we preview previous 10 digits
-- Check if it is a digit, only submit if it is a digit or EOF
-- TKinter UI with cute girls or something TBD as well
+- Only digits are valid input. It will let you know if input is invalid
+- In the beginning, you can set how many digits you want to recite. Type infinite for infinte recitation!
 
 # API Used
-- I used this cool API: https://pi.delivery/#apipi_get
+- I am using this cool API: https://pi.delivery/#apipi_get
 
 # Sources
 - ChatGPT (ty :prayge:)
