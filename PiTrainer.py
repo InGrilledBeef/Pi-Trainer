@@ -69,6 +69,7 @@ def main():
             start += 100
             pi_digits = get_pi_digits(start)
         
+    print("".join(digit_input))  # final output (temp fix)
 
 if __name__ == "__main__":
     main()
