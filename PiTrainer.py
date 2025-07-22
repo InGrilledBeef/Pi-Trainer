@@ -71,5 +71,9 @@ def main():
         
     print("".join(digit_input))  # final output (temp fix)
 
+    print("peek ahead:")
+
+    print(''.join(get_pi_digits(digit_count+1)), end="")
+
 if __name__ == "__main__":
     main()
