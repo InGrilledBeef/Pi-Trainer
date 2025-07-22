@@ -70,10 +70,11 @@ def main():
             pi_digits = get_pi_digits(start)
         
     print("".join(digit_input))  # final output (temp fix)
+    print("You recited", digit_count, "number of digits!")
 
     print("peek ahead:")
 
-    print(''.join(get_pi_digits(digit_count+1)), end="")
+    print(''.join(get_pi_digits(digit_count)), end="")
 
 if __name__ == "__main__":
     main()
