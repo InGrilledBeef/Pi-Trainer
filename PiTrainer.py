@@ -70,7 +70,7 @@ def main():
             pi_digits = get_pi_digits(start)
         
     print("".join(digit_input))  # final output (temp fix)
-    print("You recited", digit_count, "number of digits!")
+    print("You recited", start + digit_count, "number of digits!")
 
     print("peek ahead:")
 
