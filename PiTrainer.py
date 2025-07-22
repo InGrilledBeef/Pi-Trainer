@@ -74,7 +74,7 @@ def main():
 
     print("peek ahead:")
 
-    print(''.join(get_pi_digits(digit_count)), end="")
+    print(''.join(get_pi_digits(start + digit_count)), end="")
 
 if __name__ == "__main__":
     main()
